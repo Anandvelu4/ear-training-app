@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ear Training Workbook</title>
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
+    h1 { color: #333; }
+    .day { background: #fff; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    button { padding: 10px 15px; border: none; background: #4CAF50; color: #fff; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <h1>🎵 Ear Training Workbook</h1>
+  <p>20 minutes per day — 10 min app + 10 min exercises</p>
+  <div id="workbook"></div>
+
+  <script>
+    const days = [
+      "Day 1: Intervals - Major & Minor 2nds",
+      "Day 2: Intervals - Major & Minor 3rds",
+      "Day 3: Perfect 4th & Perfect 5th",
+      "Day 4: Major 6th & Minor 6th",
+      "Day 5: Major 7th & Minor 7th",
+      "Day 6: Octaves",
+      "Day 7: Review Intervals",
+      "Day 8: Major & Minor Triads (chords)",
+      "Day 9: Diminished & Augmented Triads",
+      "Day 10: Chord Progressions I-IV-V",
+      "Day 11: Chord Progressions ii-V-I",
+      "Day 12: Rhythm - Clap quarter & eighth notes",
+      "Day 13: Rhythm - Add rests",
+      "Day 14: Rhythm - Triplets",
+      "Day 15: Rhythm - Syncopation",
+      "Day 16: Scales - Major scale recognition",
+      "Day 17: Scales - Minor scale recognition",
+      "Day 18: Modes (Dorian, Mixolydian)",
+      "Day 19: Melodic dictation - short phrases",
+      "Day 20: Harmonic dictation - chord ID",
+      "Day 21: Singing back intervals",
+      "Day 22: Singing back scales",
+      "Day 23: Singing chord arpeggios",
+      "Day 24: Transcribe a simple melody",
+      "Day 25: Transcribe a short chord progression",
+      "Day 26: Advanced rhythms",
+      "Day 27: Mixed interval & chord recognition",
+      "Day 28: Mixed rhythm + melody dictation",
+      "Day 29: Full ear training test",
+      "Day 30: Play + Sing + Dictation integration"
+    ];
+
+    const container = document.getElementById("workbook");
+    days.forEach((d, i) => {
+      const div = document.createElement("div");
+      div.className = "day";
+      div.innerHTML = `<h3>${d}</h3><button onclick="alert('Do this today: ${d}')">Start</button>`;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
